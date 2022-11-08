@@ -39,10 +39,10 @@ while True:
         results = wikipedia.summary(query, sentences=2)
         speak("According to wikipedia")
         speak(results)
-    elif 'are you' in query:
-        speak("I am Voice Assistant developed by Group 6")
     elif 'how are you' in query:
         speak("I am fine thank you")
+    elif 'are you' in query:
+        speak("I am Voice Assistant developed by Group 6")
     elif 'open youtube' in query:
         speak("opening youtube")
         webbrowser.open("youtube.com")
