@@ -26,7 +26,7 @@ def take_command():
     except Exception as e:
         print(e)
         speak("Sorry, I didnt get you")
-        return "None"
+        return ""
     return query
 
 speak("Voice assistance activated ")
