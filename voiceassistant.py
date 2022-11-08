@@ -49,16 +49,34 @@ while True:
     elif 'open google' in query:
         speak("opening google")
         webbrowser.open("google.com")
-    elif 'search' in query:
+    elif 'open bing' in query:
+        speak("opening bing")
+        webbrowser.open("bing.com")
+        webbrowser.open(key)
+    elif 'search on bing' in query or 'search in bing' in query:
         speak("What do you want to search for")
         key = take_command()
-        key="https://www.google.com/search?q="+key
+        key="https://www.bing.com/search?q="+key
+        webbrowser.open(key)
+    elif 'search on youtube' in query or 'search in youtube' in query:
+        speak("What do you want to search for")
+        key = take_command()
+        key="https://www.youtube.com/results?search_query="+key
+        webbrowser.open(key)
+    elif 'search on spotify' in query or 'search in spotify' in query:
+        speak("What do you want to search for")
+        key = take_command()
+        key="https://open.spotify.com/search/"+key
         webbrowser.open(key)
     elif 'direction' in query or 'map' in query:
         speak("Where do you want to go")
         area = take_command()
         area="https://www.google.com/maps/dir/"+area
         webbrowser.open(area)
+    elif 'search' in query:
+        speak("What do you want to search for")
+        key = take_command()
+        key="https://www.google.com/search?q="+key
     elif 'open github' in query:
         speak("opening github")
         webbrowser.open("github.com")
