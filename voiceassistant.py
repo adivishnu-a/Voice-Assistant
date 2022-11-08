@@ -54,7 +54,7 @@ while True:
         key = take_command()
         key="https://www.google.com/search?q="+key
         webbrowser.open(key)
-    elif 'directions' in query or 'map' in query:
+    elif 'direction' in query or 'map' in query:
         speak("Where do you want to go")
         area = take_command()
         area="https://www.google.com/maps/dir/"+area
@@ -82,7 +82,7 @@ while True:
         webbrowser.open("web.whatsapp.com")
     elif 'play music' in query:
         speak("opening music on Spotify")
-        webbrowser.open("spotify.com")
+        webbrowser.open("spotify:user:%userid:playlist:%playlistid:play")
     elif 'local disk' in query:
         speak("Which disk do you want to open?")
         diskname = take_command()
