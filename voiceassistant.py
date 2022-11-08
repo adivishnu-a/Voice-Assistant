@@ -51,34 +51,12 @@ while True:
         webbrowser.open("google.com")
     elif 'search' in query:
         speak("What do you want to search for")
-        r = sr.Recognizer()
-        with sr.Microphone() as source:
-            print("Listening...")
-            r.pause_threshold = 1
-            audio = r.listen(source)
-        try:
-            print("Recognizing...")
-            key = r.recognize_google(audio, language='en-in')
-            print("Searching for " + key + "\n")
-        except Exception as e:
-            print(e)
-            speak("Sorry, I didnt get you")
+        key = take_command()
         key="https://www.google.com/search?q="+key
         webbrowser.open(key)
-    elif 'directions' in query:
+    elif 'directions' in query or 'map' in query:
         speak("Where do you want to go")
-        r = sr.Recognizer()
-        with sr.Microphone() as source:
-            print("Listening...")
-            r.pause_threshold = 1
-            audio = r.listen(source)
-        try:
-            print("Recognizing...")
-            area = r.recognize_google(audio, language='en-in')
-            print("Directions for " + area + "\n")
-        except Exception as e:
-            print(e)
-            speak("Sorry, I didnt get you")
+        area = take_command()
         area="https://www.google.com/maps/dir/"+area
         webbrowser.open(area)
     elif 'open github' in query:
@@ -107,38 +85,21 @@ while True:
         webbrowser.open("spotify.com")
     elif 'local disk' in query:
         speak("Which disk do you want to open?")
-        r = sr.Recognizer()
-        with sr.Microphone() as source:
-            print("Listening...")
-            r.pause_threshold = 1
-            audio = r.listen(source)
-        try:
-            print("Recognizing...")
-            diskname = r.recognize_google(audio, language='en-in')
-            diskname=diskname.upper()
-            print("Opening disk " + diskname + "\n")
-        except Exception as e:
-            print(e)
-            speak("Sorry, I didnt get you")
-        diskname = diskname+"://"
-        webbrowser.open(diskname)
+        diskname = take_command()
+        if "C" in diskname or "c" in diskname:
+            os.startfile("C:")
+        elif "D" in diskname or "d" in diskname:
+            os.startfile("D:")
+        elif "E" in diskname or "e" in diskname:
+            os.startfile("E:")
+        elif "F" in diskname or "f" in diskname:
+            os.startfile("F:")
     elif 'create folder' in query:
         cwd = os.getcwd()
         speak("What is the name of the new folder?")
-        r = sr.Recognizer()
-        with sr.Microphone() as source:
-            print("Listening...")
-            r.pause_threshold = 1
-            audio = r.listen(source)
-        try:
-            print("Recognizing...")
-            foldername = r.recognize_google(audio, language='en-in')
-            print("Creating folder named " + foldername + "\n")
-        except Exception as e:
-            print(e)
-            speak("Sorry, I didnt get you")
-        path = os.path.join(cwd, foldername)
-        os.mkdir(path)
-        print("Directory '% s' created" % query)
+        foldername = take_command().lower()
+        openpath = os.path.join(cwd, foldername)
+        os.mkdir(openpath)
+        speak("Directory "+query+" created")
     elif 'quit' in query or 'exit' in query or 'stop' in query:
         exit(0)
