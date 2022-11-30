@@ -69,14 +69,17 @@ while True:
         key="https://open.spotify.com/search/"+key
         webbrowser.open(key)
     elif 'direction' in query or 'map' in query:
-        speak("Where do you want to go")
-        area = take_command()
-        area="https://www.google.com/maps/dir/"+area
+        speak("Where do you want to go to")
+        dest = take_command()
+        speak("Where are you going from")
+        src = take_command()
+        area="https://www.google.com/maps/dir/"+src+"/"+dest
         webbrowser.open(area)
     elif 'search' in query:
         speak("What do you want to search for")
         key = take_command()
         key="https://www.google.com/search?q="+key
+        webbrowser.open(key)
     elif 'open github' in query:
         speak("opening github")
         webbrowser.open("github.com")
