@@ -113,6 +113,8 @@ while True:
         elif "male" in voicename or "boy" in voicename:
             engine.setProperty('voice', voices[0].id)
             speak("Voice Changed")
+        else:
+            speak("Sorry I didn't get that")
     elif 'local disk' in query:
         speak("Which disk do you want to open?")
         diskname = take_command()
@@ -124,6 +126,8 @@ while True:
             os.startfile("E:")
         elif "F" in diskname or "f" in diskname:
             os.startfile("F:")
+        else:
+            speak("Sorry I didn't get that")
     elif 'create folder' in query:
         cwd = os.getcwd()
         speak("What is the name of the new folder?")
@@ -133,3 +137,5 @@ while True:
         speak("Directory "+query+" created")
     elif 'quit' in query or 'exit' in query or 'stop' in query:
         exit(0)
+    else:
+        speak("Sorry I didn't get that")
