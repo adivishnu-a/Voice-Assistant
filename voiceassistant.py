@@ -104,6 +104,15 @@ while True:
     elif 'play music' in query:
         speak("opening music on Spotify")
         webbrowser.open("spotify:user:%userid:playlist:%playlistid:play")
+    elif 'change voice' in query:
+        speak("Do you want a male voice or female voice?")
+        voicename = take_command()
+        if "female" in voicename or "girl" in voicename:
+            engine.setProperty('voice', voices[1].id)
+            speak("Voice Changed")
+        elif "male" in voicename or "boy" in voicename:
+            engine.setProperty('voice', voices[0].id)
+            speak("Voice Changed")
     elif 'local disk' in query:
         speak("Which disk do you want to open?")
         diskname = take_command()
