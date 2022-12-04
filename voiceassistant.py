@@ -111,14 +111,12 @@ while True:
     elif 'change voice' in query:
         speak("Do you want a male voice or female voice?")
         voicename = take_command()
-        if "female" in voicename or "girl" in voicename:
+        if "female" in voicename or "girl" in voicename or "woman" in voicename:
             engine.setProperty('voice', voices[1].id)
             speak("Voice Changed")
-        elif "male" in voicename or "boy" in voicename:
+        elif "male" in voicename or "boy" in voicename or "man" in voicename:
             engine.setProperty('voice', voices[0].id)
             speak("Voice Changed")
-        else:
-            speak("Sorry I didn't get that")
     elif 'local disk' in query:
         speak("Which disk do you want to open?")
         diskname = take_command()
