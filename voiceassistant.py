@@ -3,6 +3,7 @@ import speech_recognition as sr
 import wikipedia
 import webbrowser
 import os
+import time
 
 engine = pyttsx3.init("sapi5")
 voices = engine.getProperty("voices")
@@ -43,6 +44,9 @@ while True:
         speak("I am fine thank you")
     elif 'are you' in query:
         speak("I am Voice Assistant developed by Group 6")
+    elif 'what time' in query:
+        curr_time = time.strftime("%H hours %M minutes %S seconds", time.localtime())
+        speak(curr_time)
     elif 'open youtube' in query:
         speak("opening youtube")
         webbrowser.open("youtube.com")
