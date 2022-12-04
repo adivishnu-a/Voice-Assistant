@@ -1,6 +1,5 @@
 import pyttsx3
 import speech_recognition as sr
-import wikipedia
 import webbrowser
 import os
 import time
@@ -35,11 +34,10 @@ speak("How can i help you")
 while True:
     query = take_command().lower()
     if 'wikipedia' in query:
-        speak("Searching Wikipedia ...")
-        query = query.replace("wikipedia", '')
-        results = wikipedia.summary(query, sentences=2)
-        speak("According to wikipedia")
-        speak(results)
+        speak("What do you want to search in wikipedia")
+        key = take_command()
+        key="https://en.wikipedia.org/wiki/"+key
+        webbrowser.open(key)
     elif 'how are you' in query:
         speak("I am fine thank you")
     elif 'are you' in query:
@@ -128,8 +126,6 @@ while True:
             os.startfile("E:")
         elif "F" in diskname or "f" in diskname:
             os.startfile("F:")
-        else:
-            speak("Sorry I didn't get that")
     elif 'create folder' in query:
         cwd = os.getcwd()
         speak("What is the name of the new folder?")
@@ -139,5 +135,3 @@ while True:
         speak("Directory "+query+" created")
     elif 'quit' in query or 'exit' in query or 'stop' in query:
         exit(0)
-    else:
-        speak("Sorry I didn't get that")
