@@ -54,7 +54,6 @@ while True:
     elif 'open bing' in query:
         speak("opening bing")
         webbrowser.open("bing.com")
-        webbrowser.open(key)
     elif 'search on bing' in query or 'search in bing' in query:
         speak("What do you want to search for")
         key = take_command()
@@ -107,6 +106,7 @@ while True:
         speak("opening music on Spotify")
         webbrowser.open("spotify:user:%userid:playlist:%playlistid:play")
     elif 'change voice' in query:
+    # 1 for female and 0 for male voice
         speak("Do you want a male voice or female voice?")
         voicename = take_command()
         if "female" in voicename or "girl" in voicename or "woman" in voicename:
