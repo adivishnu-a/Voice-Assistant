@@ -49,7 +49,7 @@ Start the server
 
 ## FAQ
 
-#### Do I need to change any part of the code?
+#### Are changes required in any part of the code?
 
 No, the code is system and platform independent, so changes in the .py script are not required. Just install the required dependencies, and run the .py script
 
