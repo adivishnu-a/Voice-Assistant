@@ -18,7 +18,7 @@ This application allows the user to:
 - Get Directions to a place
 - Create or Open Local Folders
 
-
+and perform many similar tasks
 
 ## Run Locally
 
