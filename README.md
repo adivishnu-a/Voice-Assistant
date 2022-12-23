@@ -40,7 +40,7 @@ Go to the project directory
   cd Voice-Assistant
 ```
 
-Start the server
+Run the Program
 
 ```bash
   python voiceassistant.py
