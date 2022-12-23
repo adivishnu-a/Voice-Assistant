@@ -1,8 +1,9 @@
 
 # Voice-Assistant
 
-- A Voice Assistant for your PC using Python
-- Done as part of the Semester 3 "Hands on Python" Course at SRM University, AP
+A Voice Assistant for your PC using Python. Done as part of the Semester 3 "Hands on Python" Course at SRM University, AP.
+
+This program, once started, takes continuous voice inputs from the user and performs a wide variety of tasks in the user’s PC totally handsfree, until the user asks the program to ”stop”.
 
 
 ## Features
