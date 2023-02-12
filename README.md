@@ -56,5 +56,5 @@ No, the code is system and platform independent, so changes in the .py script ar
 
 #### What are the dependencies for?
 
-The dependenciesused in this program are the modules pyttsx3 for Text-to-speech functionality, which works offline, and SpeechRecognition module to take the audio input from the user and recognise the user's command and convert it into text
+The dependencies used in this program are the modules pyttsx3 for Text-to-speech functionality, which works offline, and SpeechRecognition module to take the audio input from the user and recognise the user's command and convert it into text
 
