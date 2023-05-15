@@ -22,31 +22,30 @@ and perform many similar tasks
 
 ## Run Locally
 
-Install dependencies
+- Install dependencies
 
 ```bash
   pip install pyttsx3
   pip install SpeechRecognition
 ```
 
-Clone the project
+- Clone the project
 
 ```bash
   git clone https://github.com/adivishnu-a/Voice-Assistant
 ```
 
-Go to the project directory
+- Go to the project directory
 
 ```bash
   cd Voice-Assistant
 ```
 
-Run the Program
+- Run the Program
 
 ```bash
   python voiceassistant.py
 ```
-
 
 ## FAQ
 
