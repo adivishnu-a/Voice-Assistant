@@ -20,6 +20,7 @@ This application allows the user to:
 
 and perform many similar tasks
 
+Show some love by starring the repo ⭐
 ## Run Locally
 
 - Install dependencies
