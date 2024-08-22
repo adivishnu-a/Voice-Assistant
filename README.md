@@ -34,6 +34,7 @@ Install the dependencies by running the following commands:
 ```shell
 pip install pyttsx3
 pip install SpeechRecognition
+pip install pyaudio
 ```
 
 ### Usage
